@@ -1,5 +1,5 @@
 import { formatGraphData } from "../formatGraphData";
-import { Data } from "../formatTableData";
+import { Data } from "../types";
 
 describe("formatGraphData", () => {
   const data: Data = {
