@@ -10,8 +10,6 @@ export interface TableData {
 }
 
 export const formatTableData = (data: Data, startsWith: string) => {
-  console.log(data);
-
   const filteredData = Object.entries(data).filter(([key]) =>
     key.startsWith(startsWith)
   );

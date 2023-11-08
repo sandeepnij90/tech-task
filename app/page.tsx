@@ -1,4 +1,5 @@
 import { DisplayData } from "@/components/DisplayData";
+import { formatGraphData } from "@/utils/formatGraphData";
 import { formatTableData } from "@/utils/formatTableData";
 
 async function getData() {
@@ -11,13 +12,13 @@ async function getData() {
 
 export default async function Home() {
   const data = await getData();
+  console.log({ data });
   const tableData = formatTableData(data.TK1, "TK1_");
-
-  console.log({ tableData });
+  const graphData = formatGraphData(data.TK1, "TK1_");
 
   return (
     <main className="">
-      <DisplayData tableData={tableData} />
+      <DisplayData tableData={tableData} graphData={graphData} />
     </main>
   );
 }
