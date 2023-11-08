@@ -1,8 +1,4 @@
-interface Data {
-  data: {
-    [key: string]: any;
-  };
-}
+import { Data } from "./types";
 
 export interface TableData {
   metric: string;

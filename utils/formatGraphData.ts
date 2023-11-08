@@ -1,11 +1,5 @@
 import { generateRandomColor } from "./generateRandomColor";
-
-//make this a reusable interface
-interface Data {
-  data: {
-    [key: string]: any;
-  };
-}
+import { Data } from "./types";
 
 export const formatGraphData = (data: Data, startsWith: string) => {
   const filteredData = Object.entries(data).filter(([key]) =>

@@ -12,7 +12,6 @@ async function getData() {
 
 export default async function Home() {
   const data = await getData();
-  console.log({ data });
   const tableData = formatTableData(data.TK1, "TK1_");
   const graphData = formatGraphData(data.TK1, "TK1_");
 
